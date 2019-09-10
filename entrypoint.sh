@@ -1,5 +1,8 @@
 #!/bin/sh
 set -eu
 
-/app/doctl --access-token "${INPUT_ACCESS_TOKEN}" kubernetes cluster kubeconfig save ${INPUT_CLUSTER}
+cd ${GITHUB_WORKSPACE}
+export DIGITALOCEAN_ACCESS_TOKEN="${INPUT_ACCESS_TOKEN}"
+
+/app/doctl kubernetes cluster kubeconfig save ${INPUT_CLUSTER}
 kubectl $*
