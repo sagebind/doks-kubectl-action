@@ -1,0 +1,11 @@
+name: doks-kubectl
+description: GitHub action for DigitalOcean Managed Kubernetes (DOKS) that securely connects to a cluster and runs a kubectl command.
+inputs:
+  access_token:
+    description: DigitalOcean access token
+    required: true
+  cluster:
+    description: Kubernetes cluster name or ID
+    required: true
+runs:
+  image: Dockerfile
