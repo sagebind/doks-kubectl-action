@@ -1,4 +1,4 @@
-FROM digitalocean/doctl
+FROM digitalocean/doctl:1-latest
 
 ARG KUBECTL_VERSION=1.15.0
 
