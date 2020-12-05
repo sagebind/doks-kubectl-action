@@ -8,6 +8,9 @@ inputs:
   cluster:
     description: Kubernetes cluster name or ID
     required: true
+  kubectl_version:
+    description: Kubectl version to use
+    required: false
 runs:
   using: docker
   image: Dockerfile
